@@ -1,0 +1,115 @@
+<head>
+	<meta charset="UTF-8">
+	<title>CS</title>
+	
+	<!-- 1、CSS内部样式 -->
+	<style>
+		h1{
+			color:green
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 2、行内样式 -->
+	<h1 style="color: blue ">我是标题</h1>
+</body>
+
+
+<!-- 3外部样式 -->
+	在html外定义一个css文件，然后再将css文件引入到html中
+
+
+优先级:就近原则，元素离哪个css样式近，就会使用该样式
+
+外部样式的两种导入方式:
+	链接式(html):
+		<link rel='stylesheet' href='css/style.css'>
+
+	导入式(CSS2.1):
+		<style>
+			@import url('css/style.css')
+		</style>
+
+
+
+
+选择器:
+	标签选择器:
+		会选中到页面上所有的这个标签元素。如<h1>标签，直接使用h1{...样式}
+
+	类选择器(可复用):
+		<head>
+			<style>
+			<!-- .加上class名 -->
+				.time{
+					color:blue
+				}
+			</style>
+		</head>
+		<body>
+			<h1 class="time">隋唐宋</h1>
+		</body>
+
+
+	id选择器(id必须包保证全局唯一):
+		<head>
+			<style>
+			<!-- #加上id名 -->
+				#time{
+					color:blue
+				}
+			</style>
+		</head>
+		<body>
+			<h1 id="time">隋唐宋</h1>
+		</body>
+	
+
+	优先级:id选择器>class选择器>标签选择器
+
+
+层次选择器(了解就好):
+
+	后代选择器:即选择在某个元素后面的所有元素
+		body p{  /*选择body元素后面的所有p元素*/
+			background:red;
+		 }
+
+
+	子选择器(下一代，儿子):
+		body>p{  /*选择body元素后面(子)一级的p元素*/
+			background:#3cbda6;
+		 }
+
+	相邻选择器(同辈的，选择一个(向下)相邻的元素):
+		.active + p{
+			...
+		}
+
+
+	通用选择器(当前选中元素的向下的所有兄弟元素):
+		.active~p{
+			...
+		}
+
+https://www.bilibili.com/video/BV1YJ411a7dy?p=7&spm_id_from=pageDriver
+结构伪类选择器:
+
+
+属性选择器(重要):
+
+
+盒子模型:
+	margin:外边距
+	padding:内边距
+	border:边框
+	
+
+	https://www.bilibili.com/video/BV1YJ411a7dy?p=14&spm_id_from=pageDriver
+	边框:
+
+
+
+
+	
